@@ -40,6 +40,7 @@ module.exports = {
           from: { before: true },
           as: { before: true },
           else: { before: true },
+          catch: { before: true },
         },
       },
     ],
