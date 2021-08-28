@@ -23,7 +23,7 @@ module.exports = {
     "brace-style": "off",
     "@typescript-eslint/brace-style": ["error", "1tbs"],
     "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/comma-dangle": ["error", "always-multiline", { functions: "never" }],
     "comma-spacing": "off",
     "@typescript-eslint/comma-spacing": ["error"],
     "default-param-last": "off",
