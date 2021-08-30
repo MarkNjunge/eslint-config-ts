@@ -126,6 +126,7 @@ module.exports = {
     "@typescript-eslint/prefer-optional-chain": "warn",
     "@typescript-eslint/prefer-ts-expect-error": "error",
     "@typescript-eslint/type-annotation-spacing": "error",
+    "@typescript-eslint/prefer-regexp-exec": "off",
 
     // Requires type information
     "@typescript-eslint/no-base-to-string": "error",
