@@ -35,13 +35,7 @@ module.exports = {
     "keyword-spacing": "off",
     "@typescript-eslint/keyword-spacing": [
       "error", {
-        before: false,
-        overrides: {
-          from: { before: true },
-          as: { before: true },
-          else: { before: true },
-          catch: { before: true },
-        },
+        before: true,
       },
     ],
     "lines-between-class-members": "off",
