@@ -1,6 +1,6 @@
 # eslint-config-ts
 
-![npm (scoped)](https://img.shields.io/npm/v/@marknjunge/eslint-config-ts)
+[![npm (scoped)](https://img.shields.io/npm/v/@marknjunge/eslint-config-ts)](https://www.npmjs.com/package/@marknjunge/eslint-config-ts)
 
 My ESLint config for Typescript
 
