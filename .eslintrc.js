@@ -149,6 +149,6 @@ module.exports = {
     "@typescript-eslint/restrict-plus-operands": "error",
     "@typescript-eslint/strict-boolean-expressions": "error",
     "@typescript-eslint/switch-exhaustiveness-check": "warn",
-
+    "@typescript-eslint/restrict-template-expressions": ["error", { allowAny: true }],
   },
 };
