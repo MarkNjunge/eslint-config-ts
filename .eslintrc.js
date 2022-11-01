@@ -138,7 +138,7 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": ["warn", { ignoreVoid: true }],
     "@typescript-eslint/no-misused-promises": "error",
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
-    "@typescript-eslint/no-unnecessary-condition": "error",
+    "@typescript-eslint/no-unnecessary-condition": "warn",
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-argument": "off",
     "@typescript-eslint/no-unsafe-call": "off",
