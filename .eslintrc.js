@@ -135,7 +135,7 @@ module.exports = {
         ignoreArrowShorthand: true,
       },
     ],
-    "@typescript-eslint/no-floating-promises": ["error", { ignoreVoid: true }],
+    "@typescript-eslint/no-floating-promises": ["warn", { ignoreVoid: true }],
     "@typescript-eslint/no-misused-promises": "error",
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
     "@typescript-eslint/no-unnecessary-condition": "error",
