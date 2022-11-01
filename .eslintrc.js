@@ -39,11 +39,7 @@ module.exports = {
       },
     ],
     "lines-between-class-members": "off",
-    "@typescript-eslint/lines-between-class-members": [
-      "error", "always", {
-        exceptAfterOverload: true,
-      },
-    ],
+    "@typescript-eslint/lines-between-class-members": "off",
     "no-array-constructor": "off",
     "@typescript-eslint/no-array-constructor": ["error"],
     "no-dupe-class-members": "off",
@@ -148,7 +144,7 @@ module.exports = {
     "@typescript-eslint/prefer-nullish-coalescing": "warn",
     "@typescript-eslint/promise-function-async": "error",
     "@typescript-eslint/restrict-plus-operands": "error",
-    "@typescript-eslint/strict-boolean-expressions": "error",
+    "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/switch-exhaustiveness-check": "warn",
     "@typescript-eslint/restrict-template-expressions": "off",
   },
