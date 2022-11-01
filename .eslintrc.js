@@ -102,7 +102,7 @@ module.exports = {
     "no-throw-literal": "off",
     "@typescript-eslint/no-throw-literal": ["error"],
     "require-await": "off",
-    "@typescript-eslint/require-await": "error",
+    "@typescript-eslint/require-await": "off",
     "no-return-await": "off",
     "@typescript-eslint/return-await": "error",
 
