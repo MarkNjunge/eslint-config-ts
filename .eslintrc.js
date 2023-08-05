@@ -98,7 +98,7 @@ module.exports = {
     "require-await": "off",
     "@typescript-eslint/require-await": "off",
     "no-return-await": "off",
-    "@typescript-eslint/return-await": "error",
+    "@typescript-eslint/return-await": "off",
 
     // TS rules
     "@typescript-eslint/adjacent-overload-signatures": "error",
