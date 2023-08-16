@@ -18,22 +18,22 @@ Add it to the `extends` section of your `.eslintrc` file.
 extends: ["...", "@marknjunge/eslint-config-ts"]
 ```
 
-Enable [Linting with Type Information](https://github.com/typescript-eslint/typescript-eslint/blob/893130f533173c8f34a15088f7994362d0ffffec/docs/getting-started/linting/TYPED_LINTING.md)
+Enable [Linting with Type Information](https://typescript-eslint.io/linting/typed-linting)
 
 ```diff
  module.exports = {
    parser: "@typescript-eslint/parser",
 +  parserOptions: {
++    project: true,
 +    tsconfigRootDir: __dirname,
-+    project: ["./tsconfig.json"],
 +  },
    plugins: ["@typescript-eslint"],
-   extends: [
-     "eslint:recommended",
-     "plugin:@typescript-eslint/recommended",
-+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-     "@marknjunge/eslint-config-ts",
-   ],
++  overrides: [
++    {
++      files: ["*.js"],
++      extends: ["plugin:@typescript-eslint/disable-type-checked"],
++    }
++  ]
  };
 ```
 
