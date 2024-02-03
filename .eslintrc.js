@@ -39,6 +39,7 @@ module.exports = {
       },
     ],
     // stylistic
+    "@stylistic/eol-last": ["error", "always"],
     "@stylistic/indent": [
       "error",
       2,
