@@ -6,40 +6,43 @@ My ESLint config for Typescript
 
 ## Usage
 
-Install the package
+1. Install the package
 
 ```
 npm install --save-dev @marknjunge/eslint-config-ts
 ```
 
-Add it to the `extends` section of your `.eslintrc` file.
+2. Add it to the `extends` section of your `.eslintrc` file.
 
 ```javascript
 extends: ["...", "@marknjunge/eslint-config-ts"]
 ```
 
-Enable [Linting with Type Information](https://typescript-eslint.io/linting/typed-linting)
+3. Add `@stylistic` to plugins
 
 ```diff
- module.exports = {
-   parser: "@typescript-eslint/parser",
-+  parserOptions: {
-+    project: true,
-+    tsconfigRootDir: __dirname,
-+  },
-   plugins: ["@typescript-eslint"],
+- plugins: ["@typescript-eslint"],
++ plugins: ["@typescript-eslint", "@stylistic"],
+```
+
+4. Add the following helpful scripts (optional)
+
+```json
+"lint": "eslint **/*.{ts,js}",
+"lint:fix": "eslint **/*.{ts,js} --fix"
+```
+
+**NB**: If your project contains javascript, you may need to disable type checking for js files.
+
+```diff
+// .eslintrc.js
+
+module.exports = {
 +  overrides: [
 +    {
 +      files: ["*.js"],
 +      extends: ["plugin:@typescript-eslint/disable-type-checked"],
 +    }
 +  ]
- };
-```
-
-Add the following helpful scripts
-
-```json
-"lint": "eslint **/*.{ts,js}",
-"lint:fix": "eslint **/*.{ts,js} --fix"
+};
 ```
