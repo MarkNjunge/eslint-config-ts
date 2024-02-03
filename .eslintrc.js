@@ -12,14 +12,15 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.json"],
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "@stylistic"],
   extends: [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/strict-type-checked",
     "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:@stylistic/recommended-extends",
   ],
   rules: {
-    quotes: ["error", "double"],
     "@typescript-eslint/no-unsafe-call": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
@@ -35,6 +36,49 @@ module.exports = {
       {
         ignoreArrowShorthand: true,
         ignoreVoidOperator: true,
+      },
+    ],
+    // stylistic
+    "@stylistic/indent": [
+      "error",
+      2,
+      {
+        ignoredNodes: [
+          "FunctionExpression > .params[decorators.length > 0]",
+          "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
+          "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key",
+        ],
+      },
+    ],
+    "@stylistic/quote-props": ["error", "as-needed"],
+    "@stylistic/quotes": ["error", "double"],
+    "@stylistic/arrow-parens": ["error", "as-needed"],
+    "@stylistic/semi": ["error", "always"],
+    "@stylistic/brace-style": ["error", "1tbs"],
+    "@stylistic/operator-linebreak": ["error", "after"],
+    "@stylistic/lines-between-class-members": [
+      "error",
+      {
+        enforce: [
+          { blankLine: "never", prev: "field", next: "field" },
+          { blankLine: "always", prev: "field", next: "method" },
+          { blankLine: "always", prev: "method", next: "method" },
+        ],
+      },
+      { exceptAfterOverload: false },
+    ],
+    "@stylistic/member-delimiter-style": [
+      "error",
+      {
+        multiline: {
+          delimiter: "semi",
+          requireLast: true,
+        },
+        singleline: {
+          delimiter: "semi",
+          requireLast: false,
+        },
+        multilineDetection: "brackets",
       },
     ],
   },
