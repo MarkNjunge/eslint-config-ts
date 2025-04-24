@@ -1,5 +1,3 @@
-const eslintrc = require("./.eslintrc.js");
+import config from "./eslint.config.mjs";
 
-module.exports = {
-  rules: eslintrc.rules,
-};
+export default config;
