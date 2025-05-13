@@ -31,7 +31,26 @@ export default defineConfig([
 ]);
 ```
 
-You may need to include `eslint.config.mjs` in your `tsconfig.json`
+Alternatively to override rules,
+
+```javascript
+export default defineConfig([
+  // Default configs ...
+  {
+    files: ["**/*.{js,mjs,cjs,ts}"],
+    plugins: { js },
+    extends: [markConfig],
+    rules: {
+      '@typescript-eslint/require-await': 'warn',
+      '@typescript-eslint/no-misused-promises': 'warn'
+    }
+  },
+]);
+```
+
+See [Using a Shareable Config](https://eslint.org/docs/latest/extend/shareable-configs#using-a-shareable-config) for other ways to use the config.
+
+Note: You may need to include `eslint.config.mjs` in your `tsconfig.json`
 ```diff
 {
   "include": [
@@ -39,21 +58,4 @@ You may need to include `eslint.config.mjs` in your `tsconfig.json`
 +    "eslint.config.mjs",
   ],
 }
-```
-
-See [Using a Shareable Config](https://eslint.org/docs/latest/extend/shareable-configs#using-a-shareable-config) for other ways to use the config.
-
-For example, to override rules:
-```javascript
-export default defineConfig([
-  {
-    files: ["**/*.{js,mjs,cjs,ts}"],
-    plugins: { js },
-    extends: ["js/recommended", markConfig],
-    rules: {
-        "@typescript-eslint/no-unused-vars": "error"
-    },
-  },
-]);
-
 ```
