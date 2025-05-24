@@ -1,6 +1,6 @@
 {
   "name": "@marknjunge/eslint-config-ts",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Mark Njung'e's eslint config for Typescript",
   "main": "index.js",
   "author": "Mark Njung'e",
