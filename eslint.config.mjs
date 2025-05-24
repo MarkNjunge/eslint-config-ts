@@ -42,6 +42,8 @@ export default tseslint.config(
           ignoreVoidOperator: true,
         },
       ],
+      "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
 
       "@stylistic/js/arrow-parens": ["error", "as-needed"],
       "@stylistic/js/eol-last": ["error", "always"],
