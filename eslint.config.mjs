@@ -1,8 +1,7 @@
 import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import globals from "globals";
-import stylisticTs from "@stylistic/eslint-plugin-ts";
-import stylisticJs from "@stylistic/eslint-plugin-js";
+import stylistic from "@stylistic/eslint-plugin";
 import { globalIgnores } from "eslint/config";
 
 export default tseslint.config(
@@ -12,8 +11,7 @@ export default tseslint.config(
   tseslint.configs.stylisticTypeChecked,
   {
     plugins: {
-      "@stylistic/js": stylisticJs,
-      "@stylistic/ts": stylisticTs,
+      "@stylistic": stylistic,
     },
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
@@ -45,11 +43,11 @@ export default tseslint.config(
       "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
       "@typescript-eslint/restrict-template-expressions": "off",
 
-      "@stylistic/js/arrow-parens": ["error", "as-needed"],
-      "@stylistic/js/eol-last": ["error", "always"],
-      "@stylistic/js/operator-linebreak": ["error", "after"],
+      "@stylistic/arrow-parens": ["error", "as-needed"],
+      "@stylistic/eol-last": ["error", "always"],
+      "@stylistic/operator-linebreak": ["error", "after"],
 
-      "@stylistic/ts/indent": [
+      "@stylistic/indent": [
         "error",
         2,
         {
@@ -63,12 +61,12 @@ export default tseslint.config(
         },
       ],
 
-      "@stylistic/ts/quote-props": ["error", "as-needed"],
-      "@stylistic/ts/quotes": ["error", "double"],
-      "@stylistic/ts/semi": ["error", "always"],
-      "@stylistic/ts/brace-style": ["error", "1tbs"],
+      "@stylistic/quote-props": ["error", "as-needed"],
+      "@stylistic/quotes": ["error", "double"],
+      "@stylistic/semi": ["error", "always"],
+      "@stylistic/brace-style": ["error", "1tbs"],
 
-      "@stylistic/ts/lines-between-class-members": [
+      "@stylistic/lines-between-class-members": [
         "error",
         {
           enforce: [
@@ -94,7 +92,7 @@ export default tseslint.config(
         },
       ],
 
-      "@stylistic/ts/member-delimiter-style": [
+      "@stylistic/member-delimiter-style": [
         "error",
         {
           multiline: {
