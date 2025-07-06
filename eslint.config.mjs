@@ -108,6 +108,7 @@ export default tseslint.config(
           multilineDetection: "brackets",
         },
       ],
+      "@stylistic/object-curly-spacing": ["error", "always"],
     },
   }
 );
