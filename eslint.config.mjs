@@ -42,6 +42,7 @@ export default tseslint.config(
       ],
       "@typescript-eslint/use-unknown-in-catch-callback-variable": "off",
       "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/require-await": "warn",
 
       "@stylistic/arrow-parens": ["error", "as-needed"],
       "@stylistic/eol-last": ["error", "always"],
