@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarkNjunge/eslint-config-ts"
+    "url": "git+https://github.com/MarkNjunge/eslint-config-ts.git"
   },
   "peerDependencies": {
     "@stylistic/eslint-plugin": ">= 5.10.0",
