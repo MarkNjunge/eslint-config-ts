@@ -46,7 +46,9 @@ export default defineConfig([
 
       "@stylistic/arrow-parens": ["error", "as-needed"],
       "@stylistic/eol-last": ["error", "always"],
-      "@stylistic/operator-linebreak": ["error", "after"],
+      "@stylistic/operator-linebreak": ["warn", "after", {
+        overrides: { "|": "before" }
+      }],
 
       "@stylistic/indent": [
         "error",
