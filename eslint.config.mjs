@@ -2,9 +2,9 @@ import eslint from "@eslint/js";
 import tseslint from "typescript-eslint";
 import globals from "globals";
 import stylistic from "@stylistic/eslint-plugin";
-import { globalIgnores } from "eslint/config";
+import { defineConfig, globalIgnores } from "eslint/config";
 
-export default tseslint.config(
+export default defineConfig([
   globalIgnores(["index.js", "dist/**/*"]),
   eslint.configs.recommended,
   tseslint.configs.strictTypeChecked,
@@ -112,4 +112,4 @@ export default tseslint.config(
       "@stylistic/object-curly-spacing": ["error", "always"],
     },
   }
-);
+]);
